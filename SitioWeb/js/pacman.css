@@ -1,0 +1,65 @@
+#pacman-loading {
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);}
+#pacman-loading img {
+width: 50px;
+height: 50px;
+position: absolute;
+left: 0;
+top: 0;
+ z-index: 1;
+animation: pacMan 2s linear infinite;
+  }
+#pacman-loading .dots {
+ width: 50px;
+height: 50px;
+    position: absolute;
+    left: 0;
+top: 0;
+z-index: 0;
+opacity: 0;}
+#pacman-loading .dot {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+ background-color: #fff;
+position: absolute;
+  }
+  #pacman-loading .dot1 {
+top: 20px;
+    left: 20px;
+    animation: dots 1.5s linear infinite;}
+#pacman-loading .dot2 {
+top: 20px;
+left: 0;
+animation: dots 1.5s linear infinite 0.4s;}
+#pacman-loading .dot3 {
+top: 0;
+left: 20px;
+animation: dots 1.5s linear infinite 0.8s;}
+  
+  #pacman-loading .dot4 {
+top: 0;
+ left: 0;
+ animation: dots 1.5s linear infinite 1.2s;
+  }
+
+  @keyframes pacMan {
+  0% {transform: translateX(-20px);}
+25% {transform: translateX(0); 
+    background-position: 0 0;}
+  50% {transform: translateX(0);
+    background-position: -50px 0; }
+      75% {transform: translateX(0);  
+    background-position: -100px 0;}  
+  100% {transform: translateX(-20px); }
+      }
+   
+  @keyframes dots {  
+0% { opacity: 0; }
+25% {opacity: 1;} 
+50% {opacity: 0;}
+75% {opacity: 1}
+100% {opacity: 0;}}
